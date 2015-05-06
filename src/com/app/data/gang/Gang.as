@@ -10,6 +10,7 @@ package com.app.data.gang
 	 * description: blurb of the gang
 	 * members: array of the characters in the gang
 	 * leader: single character leader of the gang
+	 * colour: tint of the property the gang owns on the map
 	 */
 	public class Gang 
 	{
@@ -17,11 +18,30 @@ package com.app.data.gang
 		protected var _description:String;
 		protected var _members:Array;
 		protected var _leader:Character;
+		protected var _colour:uint;
 		
 		//===========================================================0
-		public function Gang() 
+		public function Gang(name:String) 
 		{
-			
+			_name = name;
+		}
+		
+		//===========================================================0
+		public function set description(value:String):void 
+		{
+			_description = value;
+		}
+		
+		//===========================================================0
+		public function set members(value:Array):void 
+		{
+			_members = value;
+		}
+		
+		//===========================================================0
+		public function get name():String 
+		{
+			return _name;
 		}
 		
 	}

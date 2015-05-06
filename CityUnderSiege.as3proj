@@ -8,7 +8,7 @@
     <movie fps="60" />
     <movie width="1024" />
     <movie height="640" />
-    <movie version="4" />
+    <movie version="17" />
     <movie minorVersion="0" />
     <movie platform="AIR" />
     <movie background="#000000" />
@@ -52,7 +52,7 @@
   </includeLibraries>
   <!-- SWC Libraries -->
   <libraryPaths>
-    <!-- example: <element path="..." /> -->
+    <element path="src\swc\starling.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

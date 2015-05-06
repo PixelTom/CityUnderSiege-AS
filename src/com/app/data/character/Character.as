@@ -1,7 +1,7 @@
 package com.app.data.character 
 {
 	import com.app.data.gang.Gang;
-	import com.app.data.NameGenerator;
+	import com.app.data.generators.NameGenerator;
 	/**
 	 * CHARACTER
 	 * @author Thomas Gattenhof
@@ -36,12 +36,14 @@ package com.app.data.character
 		// Make a blank character with nothing but a name
 		public function Character(name:String = UNNAMED) 
 		{
-			_name = name == UNNAMED ? NameGenerator.generate() : name;
+			_name = name == UNNAMED ? NameGenerator.genCharacter() : name;
 			_gang = null;
 			_title = CIVILIAN;
 			_liege = null;
 			_vassals = null;
 			_properties = null;
+			
+			trace(_name);
 		}
 		
 		//===========================================================0
@@ -51,6 +53,11 @@ package com.app.data.character
 		public function get name():String 
 		{
 			return _name;
+		}
+		
+		public function set gang(value:Gang):void 
+		{
+			_gang = value;
 		}
 		
 	}
